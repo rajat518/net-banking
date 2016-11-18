@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+function dil(form)
+{
+   for(var i=0; i<form.elements.length; i++)
+   {
+		if(form.elements[i].value == "")
+		{
+		   alert("Fill out all Fields")
+		   document.F1.ACNO.focus()
+		   return false
+		}
+   }
+
+   if(isNaN(document.F1.ACNO.value))
+   {
+       alert("A/C No.  must  be  number & can't be null")
+	   document.F1.ACNO.value=""
+	   document.F1.ACNO.focus()
+	   return false
+   }
+
+   if(!isNaN(document.F1.UNAME.value))
+   {
+       alert("User Name  must  be  char's & can't be null")
+	   document.F1.UNAME.value=""
+	   document.F1.UNAME.focus()
+	   return false
+   }
+
+   if(!isNaN(document.F1.PWD.value))
+   {
+       alert("Password  must  be  char's & can't be null")
+	   document.F1.PWD.value=""
+	   document.F1.PWD.focus()
+	   return false
+   }
+
+   if(isNaN(document.F1.TACNO.value))
+   {
+       alert("Target  A/C No.  must  be  number & can't be null")
+	   document.F1.TACNO.value=""
+	   document.F1.TACNO.focus()
+	   return false
+   }
+
+   if(isNaN(document.F1.AMT.value))
+   {
+       alert("Amount  must  be  number & can't be null")
+	   document.F1.AMT.value=""
+	   document.F1.AMT.focus()
+	   return false
+   }
+
+   return true   
+}
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#d0d0d0">
+<FORM NAME="F1" METHOD="POST" onSubmit="return dil(this)" ACTION="./transcli">
+<CENTER><FONT SIZE="5" COLOR="RED">WELCOME&nbsp; TO&nbsp; FUNDS&nbsp; TRANSFER&nbsp; </FONT><BR><BR><BR><BR>
+ACCOUNT&nbsp; NO&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=TEXT NAME="ACNO" SIZE=22><BR><BR>
+USER&nbsp; NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=TEXT NAME="UNAME" SIZE=22><BR><BR>
+PASSWORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=PASSWORD NAME="PWD" SIZE=22><BR><BR>
+TARGET &nbsp;A/C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=TEXT NAME="TACNO" SIZE=22><BR><BR>
+AMOUNT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=TEXT NAME="AMT" SIZE=22><BR><BR><BR><BR>
+<INPUT TYPE=SUBMIT VALUE="TRANSFER">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE=RESET VALUE="CLEAR"><BR><BR><BR>
+<A href="Main.html"><IMG SRC="home1.gif"></IMG></A>
+</CENTER>
+</FORM>
+</BODY>
+</HTML>

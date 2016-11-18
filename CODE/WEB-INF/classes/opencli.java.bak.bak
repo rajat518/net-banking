@@ -1,0 +1,65 @@
+import java.io.*;
+//import java.rmi.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.sql.*;
+
+public class Opencli extends HttpServlet
+{
+	String uname;
+	String pwd;
+	String addr;
+	int phone;
+	int amo;
+	Details b;
+PreparedStatement pst;
+Connection con;
+
+	public void init()throws ServletException
+	{
+
+	 try{  
+		 con=DriverManager.getConnection("jdbc:odbc:Bank","scott","tiger");
+
+//pst=con.prepareStatement("insert into open1 values(?,?,?,?,?)");
+       	    
+
+	      System.out.println("Looking for Server .........");
+        }catch(Exception e){System.out.println(e);}
+	}
+
+	public void doPost(HttpServletRequest srq, HttpServletResponse res)throws ServletException,IOException
+	{
+      try{//con=DriverManager.getConnection("jdbc:odbc:Bank","scott","tiger");
+ pst=con.prepareStatement("insert into open1 values(?,?,?,?,?)");
+       	    
+
+			
+	        //b=(Details)Naming.lookup("rmi://localhost:9999/bank");
+			uname=srq.getParameter("UNAME");
+			pwd=srq.getParameter("PWD");
+			addr=srq.getParameter("ADD");
+			phone=Integer.parseInt(srq.getParameter("PHO"));
+			amo=Integer.parseInt(srq.getParameter("AMT"));
+			res.setContentType("text/html");
+                pst.setString(1,uname);
+                pst.setString(2,pwd);
+                pst.setString(3,addr);
+                pst.setInt(4,phone);
+                pst.setInt(5,amo);
+                int rec =pst.executeUpdate();
+PrintWriter out= res.getWriter();
+			
+
+               
+
+
+			//int k=b.open(uname,pwd,amo,addr,phone);
+//int k=12345;
+		    //System.out.println("The A/c is  =====> "+k);
+	        //out.println("<HTML><CENTER><BODY><BR><BR><H2> The A/C No. is : "+k+"</H2></BODY></CENTER</HTML>");
+ out.println("welcome to website");
+
+         }catch(Exception ee){ee.printStackTrace();}
+	}
+} 

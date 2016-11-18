@@ -1,0 +1,8 @@
+->there is no database.....
+->given ms-acsess database is totaly wrong
+->we have to create the orcle database for this project
+->set ther dsn name as bank
+->create the scott ,tiger  user in orcle
+->web.xml is not in formate .in that we have set the servlets classes
+->in servlets source files we have to set the port number
+->this project need the RIM server with the port numberb 5555

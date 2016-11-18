@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+</HEAD>
+
+<BODY BGCOLOR="#ffffRR">
+<FORM METHOD=POST ACTION="./Upload">
+<CENTER><FONT SIZE="5" COLOR="black"><B>WELCOME&nbsp; TO&nbsp; ONLINE&nbsp; BANKING</B></FONT><BR>
+<BR><BR><img src="anibar.gif" width=750 height=3><BR><BR><BR><BR>
+<TABLE cellspacing=4 cellpadding=4 border=1 bordercolor=orange>
+<TR>
+	<td><A HREF="Create.html"> CREATE A NEW ACOUNT</A></td>
+</TR>
+<br>
+<TR align=center>
+	<td><a href="Balance.html"> GET&nbsp; BALANCE</a></td>
+</TR>
+<br>
+<TR align=center>
+	<TD><A href="Deposit.html">DEPOSIT&nbsp; AMOUNT</A></TD>
+</TR>
+<br>
+<TR align=center>
+	<TD><A href="Withdraw.html"><B>WITHDRAW&nbsp; AMOUNT</B></A></TD>
+</TR>
+<br>
+<TR align=center>
+	<TD><A href="Transfer.html"><B>TRANSFER&nbsp; AMOUNT</B></A></TD>
+</TR>
+<br>
+<TR align=center>
+	<TD><A href="Close.html"><B>CLOSE&nbsp; ACCOUNT</B></A></TD>
+</TR>
+<br>
+<TR align=center>
+	<TD><A href="Report.html"><B>Report &nbsp; ACCOUNT</B></A></TD>
+</TR>
+<br>
+
+<TR align=center>
+	<TD><A href="Exit.html"><B>EXIT</B></A></TD>
+</TR>
+
+</TABLE>
+<BR><BR>
+<MARQUEE width=400><FONT COLOR=blue>This&nbsp; Project&nbsp; Was&nbsp; Developed&nbsp; by&nbsp; <B><FONT COLOR=red>server&nbsp; TECHNOLOGIES</FONT></B></FONT></MARQUEE>
+</FORM >
+</BODY>
+</HTML>
+

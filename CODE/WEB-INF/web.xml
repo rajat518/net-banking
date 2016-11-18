@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Opencli</servlet-name>
+    <servlet-class>Opencli</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Balancecli</servlet-name>
+    <servlet-class>Balancecli</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>depocli</servlet-name>
+    <servlet-class>depocli</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>withdrcli</servlet-name>
+    <servlet-class>withdrcli</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Transcli</servlet-name>
+    <servlet-class>Transcli</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Closecli</servlet-name>
+    <servlet-class>Closecli</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Report</servlet-name>
+    <servlet-class>Report</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>Search</servlet-class>
+  </servlet>
+
+   <servlet-mapping>
+    <servlet-name>Opencli</servlet-name>
+    <url-pattern>/Opencli</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Balancecli</servlet-name>
+    <url-pattern>/Balancecli</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>depocli</servlet-name>
+    <url-pattern>/depocli</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>withdrcli</servlet-name>
+    <url-pattern>/withdrcli</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+      <servlet-name>Transcli</servlet-name>
+    <url-pattern>/Transcli</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Closecli</servlet-name>
+    <url-pattern>/closecli</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>Report</servlet-name>
+    <url-pattern>/Report</url-pattern>
+      </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/Search</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <welcome-file-list>
+    <welcome-file>Logo.html</welcome-file>
+  </welcome-file-list>
+</web-app>

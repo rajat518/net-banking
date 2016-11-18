@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+function check()
+{
+var Ac;
+   if(!isNaN(F1.Ac.value))
+   {
+	   if(Ac<=10)
+	{
+	alert("please enter valid number");
+	F1.Ac.value="";
+	F1.Ac.focus();
+	 return false   
+	   }
+   }
+   else
+   {
+       alert("This  field  must  be  number")
+	   F1.Ac.value=""
+	   return false
+   }
+}
+function ch()
+	{
+	PWD=F1.PWD.value;
+	CPWD=F1.CPWD.value;
+	if(PWD!=CPWD)
+    {
+	   alert("Check Confirm PWD"); 
+	  F1.CPWD.value=""
+	  F1.CPWD.focus()	
+	  F1.PWD.focus();
+	   return false
+	}
+
+ }
+  function ch1()
+  {
+   if(!isNaN(F1.AMT.value))
+   {
+	   if(F1.AMT.value < 500)
+	   {
+		 alert("Minimum Balance should be 500 /-")
+		 F1.AMT.value=""
+		 F1.AMT.focus()
+         return false   
+	   }
+   }
+  else
+   {
+       alert("This  field  must  be  number")
+	   F1.AMT.value=""
+	   return false
+   }
+}
+function dil()
+{
+   for(var i=0; i<form.elements.length; i++)
+   {
+		if(form.elements[i].value == "")
+		{
+		   alert("Fill out all Fields")
+		   F1.UNAME.focus()
+		   return false
+		}
+   }
+
+   for(var i=0; i<3; i++)
+   {
+        if(!isNaN(form.elements[i].value))
+		{
+		   alert("This Field must be Char's")
+		   form.elements[i].value=""	
+		   form.elements[i].focus()
+		   return false
+		}
+   } 
+
+   return true   
+   }
+</SCRIPT>
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#d0d0d0">
+<FORM NAME=F1 method="POST"  ACTION="./Opencli">
+<CENTER><FONT SIZE="5" COLOR="RED">CREATE&nbsp; A&nbsp; NEW&nbsp; ACCOUNT</FONT><BR><BR><BR><BR>
+<CENTER><FONT SIZE="4" COLOR="BLACK">ACCOUNT&nbsp; NO&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=INT NAME="Ac" maxlength=12 SIZE=22 value="" onblur="check()"></FONT><BR><BR>
+<CENTER><FONT SIZE="4" COLOR="BLACK">USER&nbsp; NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=TEXT NAME="UNAME" maxlength=10 SIZE=22></FONT><BR><BR>
+<CENTER><FONT SIZE="4" COLOR="BLACK">PASSWORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=PASSWORD NAME="PWD" maxlength=6 SIZE=22></FONT><BR><BR>
+<CENTER><FONT SIZE="4" COLOR="BLACK">CONFIRM&nbsp; PWD&nbsp;&nbsp;&nbsp;<INPUT TYPE=PASSWORD NAME="CPWD"  SIZE=22 value="" onblur="ch()"></FONT><BR><BR>
+<CENTER><FONT SIZE="4" COLOR="BLACK">AMOUNT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=INT NAME="AMT" maxlength=9 SIZE=22 value="" onblur="ch1()"></FONT><BR><BR>
+<CENTER><FONT SIZE="4" COLOR="BLACK">ADDRESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea cols="15" rows="3s" name="ADD"></textarea></FONT><BR><BR>
+<CENTER><FONT SIZE="4" COLOR="BLACK">PHONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE=text NAME="PHO" maxlength=10 SIZE=22 ></FONT><BR><BR><BR>
+<INPUT TYPE=SUBMIT VALUE="SUBMIT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE=RESET VALUE="CANCEL"><br><br><br>
+<A href="Main.html"><IMG SRC="Home1.gif"></IMG></A>
+</CENTER>
+</FORM>
+</BODY>
+</HTML>
